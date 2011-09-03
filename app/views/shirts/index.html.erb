@@ -1,0 +1,21 @@
+<h1>Listing shirts</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shirts.each do |shirt| %>
+  <tr>
+    <td><%= link_to 'Show', shirt %></td>
+    <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
+    <td><%= link_to 'Destroy', shirt, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shirt', new_shirt_path %>
