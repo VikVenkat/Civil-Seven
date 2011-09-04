@@ -1,4 +1,6 @@
 Civil7::Application.routes.draw do
+  #get "user/index"
+
   devise_for :users
 
   resources :styles
@@ -9,7 +11,7 @@ Civil7::Application.routes.draw do
 
   resources :orders
   
-  
+  match '/user/:id' => 'user#index', :as => 'myaccount'
   root :to => "home#index"
 
 end

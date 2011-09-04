@@ -9,11 +9,12 @@ Meticulous craftsmanship. Supreme ease.
 </br>
 </br>
 <% if !user_signed_in? %>
+<h3> Ok sweet, I want this. </h3>
 	<%= render "/devise/registrations/signup" %>
 <% end %>
 
 <% if user_signed_in? %>
-	<%= link_to 'Subscribe me!', new_order_path %>
+	<%= link_to 'I want a new subscription!', new_order_path %>
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>	
 <% end %>
 </br>
@@ -23,3 +24,11 @@ Meticulous craftsmanship. Supreme ease.
 <%= link_to 'Shirts', shirts_path %>
 <%= link_to 'Styles', styles_path %>
 
+
+</br>
+<% if !user_signed_in? %>
+	<%= link_to('Login', new_user_session_path)  %>  
+<% end %>
+<% if user_signed_in? %>
+	<%= link_to 'My Account', myaccount_path(current_user) %>
+<% end %>
