@@ -2,6 +2,12 @@
 
 <table>
   <tr>
+    <th>User ID</th>
+    <th>Order Date</th>
+    <th>Total</th>
+    <th>Duration</th>
+    <th>Period</th>
+  
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +15,11 @@
 
 <% @orders.each do |order| %>
   <tr>
+    <td><%= order.user_id %></td>
+	<td><%= order.order_date %></td>
+	<td><%= order.total %></td>
+	<td><%= order.subs_duration %></td>
+	<td><%= order.subs_period %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -19,3 +30,6 @@
 <br />
 
 <%= link_to 'New Order', new_order_path %>
+<%= link_to 'Shirt Styles', styles_path %>
+<%= link_to 'Shirts', shirts_path %>
+<%= link_to 'Home', root_path %>

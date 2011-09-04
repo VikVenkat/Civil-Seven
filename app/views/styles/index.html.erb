@@ -2,13 +2,32 @@
 
 <table>
   <tr>
-    <th></th>
+    <th>Style Name</th>
+    <th>Collar</th>
+	<th>Accent?</th>
+    <th>Cuff</th>
+	<th>Accent?</th>
+	<th>Pocket</th>
+	<th>Placket</th>
+	<th>Accent?</th>
+	<th>Notes</th>
+    <th></th>	
     <th></th>
     <th></th>
   </tr>
 
 <% @styles.each do |style| %>
   <tr>
+    <td><%= style.name %></td>
+	<td><%= style.collar %></td>
+	<td><%= style.acc_collar %></td>
+	<td><%= style.cuff %></td>
+	<td><%= style.acc_cuff %></td>
+	<td><%= style.pocket %></td>
+	<td><%= style.placket %></td>
+	<td><%= style.acc_placket %></td>
+	<td><%= style.notes %></td>
+
     <td><%= link_to 'Show', style %></td>
     <td><%= link_to 'Edit', edit_style_path(style) %></td>
     <td><%= link_to 'Destroy', style, :confirm => 'Are you sure?', :method => :delete %></td>

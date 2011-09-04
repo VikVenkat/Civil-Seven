@@ -11,6 +11,63 @@
     </div>
   <% end %>
 
+  <div class="field">
+	<%= f.label :order_id %><br />
+	<%= f.text_field :order_id %>
+  </div>
+
+  <div class="field">
+	<%= f.label :name %><br />
+	<%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+	<%= f.label :collar %><br />
+	<%= f.text_field :collar %>
+  </div>
+  
+  <div class="field">
+	<%= f.label :acc_collar %><br />
+	<%= f.radio_button(:acc_collar, true) %>
+	<%= f.label :acc_collar, "true" %>
+	<%= f.radio_button(:acc_collar, false) %>
+	<%= f.label :acc_collar, "false" %>
+
+  </div>
+
+  <div class="field">
+	<%= f.label :cuff %><br />
+	<%= f.text_field :cuff %>
+  </div>
+
+  <div class="field">
+	<%= f.label :acc_cuff %><br />
+	<%= f.radio_button(:acc_cuff, true) %>
+	<%= f.label :acc_cuff, "true" %>
+	<%= f.radio_button(:acc_cuff, false) %>
+	<%= f.label :acc_cuff, "false" %>
+
+  </div>
+
+  <div class="field">
+	<%= f.label :pocket %><br />
+	<%= f.text_field :pocket %>
+  </div>
+
+  <div class="field">
+	<%= f.label :placket %><br />
+	<%= f.text_field :placket %>
+  </div>
+  
+  <div class="field">
+	<%= f.label :acc_placket %><br />
+	<%= f.radio_button(:acc_placket, true) %>
+	<%= f.label :acc_placket, "true" %>
+	<%= f.radio_button(:acc_placket, false) %>
+	<%= f.label :acc_placket, "false" %>
+
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
