@@ -36,12 +36,16 @@ class ShirtsController < ApplicationController
   def edit
     @shirt = Shirt.find(params[:id])
   end
+  
+  def make_shirt
+#	put some stuff here to incorporate edits  
+  end
 
   # POST /shirts
   # POST /shirts.xml
   def create
     @shirt = Shirt.new(params[:shirt])
-
+	
     respond_to do |format|
       if @shirt.save
         format.html { redirect_to(@shirt, :notice => 'Shirt was successfully created.') }

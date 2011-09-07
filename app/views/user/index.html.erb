@@ -13,19 +13,19 @@
     <th></th>
   </tr>
 
-<% current_user do |c| %>
+<%# current_user do |c| %>
   <tr>
-    <td><%= c.id %></td>
-	<td><%= c.height_ft %></td>
-	<td><%= c.height_in %></td>
-	<td><%= c.weight_lb %></td>
-	<td><%= c.body_type %></td>
-	<td><%= c.fave_garm_id %></td>
+    <td><%= current_user.id %></td>
+	<td><%= current_user.height_ft %></td>
+	<td><%= current_user.height_in %></td>
+	<td><%= current_user.weight_lb %></td>
+	<td><%= current_user.body_type %></td>
+	<td><%= current_user.fave_garm_id %></td>
     <td><%#= link_to 'Show', order %></td>
-    <td><%= link_to 'Edit', edit_user_path(current_user) %></td>
+    <td><%#= link_to 'Edit', edit_user_path(current_user) %></td>
     <td><%#= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-<% end %>
+<%# end %>
 </table>
 
 <br />

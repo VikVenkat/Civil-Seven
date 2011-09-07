@@ -14,7 +14,7 @@ Meticulous craftsmanship. Supreme ease.
 <% end %>
 
 <% if user_signed_in? %>
-	<%= link_to 'I want a new subscription!', new_order_path %>
+	<%= link_to 'I want a new subscription!', fill_user_info_path %>
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>	
 <% end %>
 </br>

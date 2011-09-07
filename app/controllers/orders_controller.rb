@@ -37,10 +37,18 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def checkout
+	# Put some order creation stuff here
+  
+  end
+  
+  
   # POST /orders
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
+
+	#	Some logic here to populate the order
 
     respond_to do |format|
       if @order.save
