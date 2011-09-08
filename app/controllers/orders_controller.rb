@@ -39,6 +39,19 @@ class OrdersController < ApplicationController
 
   def checkout
 	# Put some order creation stuff here
+    @order = Order.new(params[:order])
+
+	#	Some logic here to populate the order
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to(thankyou_path, :notice => 'Order was successfully created.') }
+        format.xml  { render :xml => @order, :status => :created, :location => @order }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
+      end
+    end
   
   end
   

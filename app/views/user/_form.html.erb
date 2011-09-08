@@ -1,5 +1,5 @@
-<%= form_for(resource, :as => resource_name, :url => edit_user_path(resource_name), :html => { :method => :put }) do |f| %>
-
+<%#= form_for(resource, :as => resource_name, :url => edit_user_registration_path(resource_name), :method => :put ) do |f| %>
+<%= form_for(@user, :url => fill_user_info_form_path(@user), :method => :put ) do |f| %>
   <div class="field">
 	<%= f.label :height_ft %><br />
 	<%= f.text_field :height_ft %>

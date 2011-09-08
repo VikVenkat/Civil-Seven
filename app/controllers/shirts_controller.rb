@@ -39,6 +39,17 @@ class ShirtsController < ApplicationController
   
   def make_shirt
 #	put some stuff here to incorporate edits  
+    @shirt = Shirt.new(params[:shirt])
+	
+    respond_to do |format|
+      if @shirt.save
+        format.html { redirect_to(checkout_path, :notice => 'Shirt was successfully created.') }
+        format.xml  { render :xml => @shirt, :status => :created, :location => @shirt }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @shirt.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   # POST /shirts
