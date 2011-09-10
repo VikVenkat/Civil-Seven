@@ -2,9 +2,11 @@
 
 <table>
   <tr>
-    <th>Style ID</th>
+    <th>Shirt ID</th>
     <th>Fabric</th>
     <th>Price</th>
+	<th>Style</th>
+	<th>Order</th>
   
     <th></th>
     <th></th>
@@ -13,13 +15,15 @@
 
 <% @shirts.each do |shirt| %>
   <tr>
-    <td><%= shirt.style_id %></td>
+    <td><%= shirt.id %></td>
 	<td><%= shirt.fabric %></td>
 	<td><%= shirt.price %></td>
+	<td><%= shirt.style %></td>
+	<td><%= shirt.order_id %></td>
   
     <td><%= link_to 'Show', shirt %></td>
     <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
-    <td><%= link_to 'Destroy', shirt, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', shirt, :method => :delete %></td>
   </tr>
 <% end %>
 </table>

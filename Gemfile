@@ -19,6 +19,10 @@ gem 'aws-s3', :require => 'aws/s3'
 
 gem 'devise'
 
+#Needed for Typhoeus?
+#From http://beginrescue.blogspot.com/2010/07/installing-curb-with-ruby-191-in.html
+#gem install curb -- --with-curl-lib=C:\Sites\curl-7.21.7-devel-mingw32\bin --with-curl-include=C:\Sites\curl-7.21.7-devel-mingw32\include
+#gem curb -- --with-curl-lib=C:\Sites\curl-7.21.7-devel-mingw32\bin --with-curl-include=C:\Sites\curl-7.21.7-devel-mingw32\include
 
 
 # Use unicorn as the web server

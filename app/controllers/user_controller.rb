@@ -1,5 +1,6 @@
 class UserController < Devise::SessionsController
   def index
+    @users = User.all
   end
   
   def show

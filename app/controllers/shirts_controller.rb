@@ -39,10 +39,19 @@ class ShirtsController < ApplicationController
   
   def make_shirt
 #	put some stuff here to incorporate edits  
-    @shirt = Shirt.new(params[:shirt])
+    @shirt = Shirt.new
+	@order = Order.new
+	@shirt.order_id = @order.id
 	
+	
+  end
+  
+  def make_shirt_form
+    @shirt = Shirt.find(params[:id])
+	@order = Order.find(@shirt.order_id => :id)
+
     respond_to do |format|
-      if @shirt.save
+      if @shirt.update_attributes(params[:shirt])
         format.html { redirect_to(checkout_path, :notice => 'Shirt was successfully created.') }
         format.xml  { render :xml => @shirt, :status => :created, :location => @shirt }
       else
